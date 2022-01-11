@@ -12,5 +12,5 @@ Resources:
       Handler: hello.handler
       MemorySize: 128
       Timeout: 3
-      CodeUri: target/cps-0.0.1-SNAPSHOT-native.zip
+      CodeUri: ../target/cps-0.0.1-SNAPSHOT-native.zip
       AutoPublishAlias: active
