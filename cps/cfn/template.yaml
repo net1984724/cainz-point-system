@@ -6,7 +6,7 @@ Resources:
   lambdaResource:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: testpipe-Native
+      FunctionName: testpipe-cps
       Role: arn:aws:iam::079862682662:role/PointSystemAurora
       Runtime: provided.al2
       Handler: hello.handler
