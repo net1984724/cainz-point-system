@@ -25,6 +25,7 @@ public class ApiGatewayEventFunction implements Function<Message<Map<String, Obj
         Map<String, Object> userMap = (Map<String, Object>) authMap.get("claims");
         String username = (String)userMap.get("cognito:username");
         System.out.println("username: " + username);
+        System.out.println("hello,world");
 
         HashMap<String, Object> returnMap = new HashMap<String, Object>();
         returnMap.put("statusCode", 201);
