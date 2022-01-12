@@ -25,11 +25,14 @@ public class ApiGatewayEventFunction implements Function<Message<Map<String, Obj
         Map<String, Object> userMap = (Map<String, Object>) authMap.get("claims");
         String username = (String)userMap.get("cognito:username");
         System.out.println("username: " + username);
-        System.out.println("hello,world");
+        String username = (String)userMap.get("cognito:username");
+        System.out.println("username: " + username);
 
         HashMap<String, Object> returnMap = new HashMap<String, Object>();
         returnMap.put("statusCode", 201);
         returnMap.put("body", "username: " + username);
+        returnMap.put("body", "username: " + username);
+
         Message<Map<String, Object>> message = MessageBuilder.withPayload((Map<String, Object>)returnMap).setHeader("Access-Control-Allow-Origin", "*").build();
         return message;
     }
